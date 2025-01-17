@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/background_green"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizImageActivity">
+
+    <TextView
+        android:id="@+id/textViewScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:text="@string/score"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewIncorrectAnswer"
+        app:layout_constraintEnd_toStartOf="@+id/textViewRemainTime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Счёт: 10 / 100" />
+
+    <TextView
+        android:id="@+id/textViewRemainTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:text="@string/remain_time"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewScore"
+        app:layout_constraintTop_toTopOf="@+id/textViewScore"
+        tools:text="Оставшееся время: 15" />
+
+    <TextView
+        android:id="@+id/textViewCorrectAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/round_shape_green"
+        android:padding="8dp"
+        android:text="@string/answer_correct"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/flexboxLayoutQuestion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewScore"
+        tools:layout_editor_absoluteY="46dp"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textViewIncorrectAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/round_shape_red"
+        android:padding="8dp"
+        android:text="@string/answer_incorrect"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/flexboxLayoutQuestion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewScore" />
+
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flexboxLayoutQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_margin="8dp"
+        app:flexWrap="wrap"
+        app:justifyContent="center"
+        app:alignItems="center"
+        app:alignContent="center"
+
+        app:layout_constraintBottom_toTopOf="@+id/textViewQuestionLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIncorrectAnswer">
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <TextView
+        android:id="@+id/textViewQuestionLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="@string/question_how_many"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextUserAnswer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flexboxLayoutQuestion"
+        tools:text="Сколько всего фруктов?" />
+
+    <EditText
+        android:id="@+id/editTextUserAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="@null"
+        android:inputType="number"
+        android:padding="8dp"
+        android:text="@string/user_answer"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayoutNumberPad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewQuestionLabel"
+        tools:text="Ответ: %d" />
+
+    <GridLayout
+        android:id="@+id/gridLayoutNumberPad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUserAnswer">
+
+        <Button
+            android:layout_margin="3dp"
+            android:text="@string/_1"
+            android:textSize="24sp" />
+
+        <Button
+            android:layout_margin="3dp"
+            android:text="@string/_2"
+            android:textSize="24sp" />
+
+        <Button
+            android:layout_margin="3dp"
+            android:text="@string/_3"
+            android:textSize="24sp" />
+
+        <Button
+            android:layout_margin="3dp"
+            android:text="@string/_4"
+            android:textSize="24sp" />
+
+        <Button
+            android:layout_margin="3dp"
+            android:text="@string/_5"
+            android:textSize="24sp" />
+
+        <Button
+            android:layout_margin="3dp"
+            android:text="@string/_6"
+            android:textSize="24sp" />
+
+        <Button
+            android:layout_margin="3dp"
+            android:text="@string/_7"
+            android:textSize="24sp" />
+
+        <Button
+            android:layout_margin="3dp"
+            android:text="@string/_8"
+            android:textSize="24sp" />
+
+        <Button
+            android:layout_margin="3dp"
+            android:text="@string/_9"
+            android:textSize="24sp" />
+
+        <Button
+            android:layout_width="88dp"
+            android:layout_height="52dp"
+            android:layout_margin="3dp"
+            android:text="@string/del"
+            android:textSize="22sp" />
+
+        <Button
+            android:layout_margin="3dp"
+            android:text="@string/_0"
+            android:textSize="24sp" />
+
+        <Button
+            android:layout_width="88dp"
+            android:layout_height="52dp"
+            android:layout_margin="3dp"
+            android:text="@string/ok"
+            android:textSize="22sp" />
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

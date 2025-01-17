@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Count Trainer</string>
+    <string name="remain_time">Оставшееся время: %d</string>
+    <string name="score">Счет: %d / %d</string>
+    <string name="answer_correct">Верно!</string>
+    <string name="answer_incorrect">Неверно. Ответ: %d</string>
+    <string name="question_how_many">Сколько всего %s?</string>
+    <string name="question_how_many_two_fruits">Сколько всего %s и %s?</string>
+    <string name="apple">яблок</string>
+    <string name="pear">груш</string>
+    <string name="banana">бананов</string>
+    <string name="orange">апельсинов</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="del">DEL</string>
+    <string name="_0">0</string>
+    <string name="ok">OK</string>
+    <string name="user_answer">%d</string>
+    <string name="textQuestion">%d %s %d = ?</string>
+    <string name="type_answer">Введите ответ:</string>
+    <string name="invalid_input">Неверный ввод</string>
+    <string name="win_message">Вы победили!</string>
+    <string name="lose_message">Вы проиграли!</string>
+    <string name="category">%s</string>
+</resources>
