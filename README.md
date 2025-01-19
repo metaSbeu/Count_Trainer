@@ -2,5 +2,4 @@
 [Скачать приложение](./app/Count_Trainer.apk)
 
 ## Демонстрация
-
-https://github.com/user-attachments/assets/8292bbac-5f62-4e79-866e-7edec41e66e3
+https://github.com/user-attachments/assets/400e74c7-9039-413f-9676-ca2898683ea7
