@@ -1,5 +1,5 @@
 ## Скачать APK
-[Скачать приложение](./app/app-debug-androidTest.apk)
+[Скачать приложение](./app/Count_Trainer.apk)
 
 ## Демонстрация
 
